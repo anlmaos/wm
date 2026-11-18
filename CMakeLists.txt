@@ -5,8 +5,8 @@ file(READ "${CMAKE_SOURCE_DIR}/VERSION" VER_RAW)
 string(STRIP ${VER_RAW} VER)
 
 project(
-  Hyprland
-  DESCRIPTION "A Modern C++ Wayland Compositor"
+  AnimaOS-WM
+  DESCRIPTION "AnimaOS WM - A Modern C++ Wayland Compositor"
   VERSION ${VER})
 
 set(HYPRLAND_TESTS_DEFAULT OFF)
@@ -96,11 +96,11 @@ message(
   STATUS "Found wayland-scanner pkgdatadir at ${WAYLAND_SCANNER_PKGDATA_DIR}")
 
 if(CMAKE_BUILD_TYPE MATCHES Debug OR CMAKE_BUILD_TYPE MATCHES DEBUG)
-  message(STATUS "Configuring Hyprland in Debug with CMake")
+  message(STATUS "Configuring AnimaOS WM in Debug with CMake")
   add_compile_definitions(HYPRLAND_DEBUG)
 else()
   add_compile_options(-O3)
-  message(STATUS "Configuring Hyprland in Release with CMake")
+  message(STATUS "Configuring AnimaOS WM in Release with CMake")
 endif()
 
 add_compile_definitions(HYPRLAND_VERSION="${HYPRLAND_VERSION}")

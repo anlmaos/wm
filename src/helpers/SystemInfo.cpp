@@ -71,7 +71,7 @@ std::string SystemInfo::getVersion(eOutputFormat fmt) {
     std::ranges::replace(commitMsg, '#', ' ');
 
     if (fmt == IPC::Socket1::FORMAT_NORMAL) {
-        std::string result = std::format("Hyprland {} built from branch {} at commit {} {} ({}).\n"
+        std::string result = std::format("AnimaOS WM {} built from branch {} at commit {} {} ({}).\n"
                                          "Date: {}\n"
                                          "Tag: {}, commits: {}\n",
                                          HYPRLAND_VERSION, GIT_BRANCH, GIT_COMMIT_HASH, GIT_DIRTY, commitMsg, GIT_COMMIT_DATE, GIT_TAG, GIT_COMMITS);

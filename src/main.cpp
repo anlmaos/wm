@@ -221,7 +221,7 @@ int main(int argc, char** argv) {
     }
 
     if (!verifyConfig) {
-        std::println("Welcome to Hyprland!");
+        std::println("Welcome to AnimaOS WM!");
         std::println(R"#(
 
                      YY    UJ

@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Hyprland (uwsm-managed)
-Comment=An intelligent dynamic tiling Wayland compositor
+Name=AnimaOS WM (uwsm-managed)
+Comment=AnimaOS WM - An intelligent dynamic tiling Wayland compositor
 Exec=uwsm start -e -D Hyprland hyprland.desktop
 TryExec=uwsm
 DesktopNames=Hyprland

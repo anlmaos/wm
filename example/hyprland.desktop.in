@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Hyprland
-Comment=An intelligent dynamic tiling Wayland compositor
+Name=AnimaOS WM
+Comment=AnimaOS WM - An intelligent dynamic tiling Wayland compositor
 Exec=@PREFIX@/@CMAKE_INSTALL_BINDIR@/start-hyprland
 Type=Application
 DesktopNames=Hyprland
