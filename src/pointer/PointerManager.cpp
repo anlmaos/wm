@@ -94,6 +94,14 @@ CPointerManager::CPointerManager() {
             if (g_pCompositor && !g_pCompositor->m_isShuttingDown)
                 std::erase_if(m_monitorStates, [](const auto& other) { return other->monitor.expired(); });
         });
+        monitor->m_events.dpmsChanged.listenStatic([this, monitor = PHLMONITORREF(monitor)] {
+            if (!monitor || !monitor->m_dpmsStatus)
+                return;
+
+            // disabling an output clears its cursor plane, so re-submit the cursor once it's back on.
+            // defer until after the output has been re-enabled by commitDPMSState.
+            g_pEventLoopManager->doLater([this]() { updateCursorBackend(); });
+        });
     });
 
     m_hooks.monitorLayoutChanged = Event::bus()->m_events.monitor.layoutChanged.listen([this] { onMonitorLayoutChange(); });
